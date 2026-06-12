@@ -1,0 +1,10 @@
+*.o
+*.i
+*.s
+debug_dbg
+debug_nodbg
+optim_no
+optim_fast
+calculator
+warn
+hello
