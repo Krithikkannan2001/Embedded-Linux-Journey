@@ -8,3 +8,11 @@ optim_fast
 calculator
 warn
 hello
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+Module.symvers
+modules.order
+.tmp_versions/
