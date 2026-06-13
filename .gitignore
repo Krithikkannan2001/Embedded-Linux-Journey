@@ -16,3 +16,10 @@ hello
 Module.symvers
 modules.order
 .tmp_versions/
+*.save
+test_device
+
+
+
+
+
