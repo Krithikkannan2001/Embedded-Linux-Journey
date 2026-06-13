@@ -1,0 +1,1 @@
+savedcmd_hello_module.ko := aarch64-linux-gnu-ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.18.33+rpt-rpi-2712/arch/arm64/module.lds -o hello_module.ko hello_module.o hello_module.mod.o .module-common.o
