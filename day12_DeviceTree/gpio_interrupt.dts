@@ -1,0 +1,26 @@
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/interrupt-controller/irq.h>
+
+&gpio {
+    krithik_gpio_pins: krithik-gpio-pins {
+        brcm,pins = <17 27>;
+        brcm,function = <1 0>;
+        brcm,pull = <0 2>;
+    };
+};
+
+&{/} {
+    krithik_gpio: krithik-gpio-interrupt {
+        compatible = "krithik-gpio-interrupt";
+        pinctrl-names = "default";
+        pinctrl-0 = <&krithik_gpio_pins>;
+        output-gpios = <&gpio 17 GPIO_ACTIVE_HIGH>;
+        interrupt-gpios = <&gpio 27 GPIO_ACTIVE_HIGH>;
+        interrupt-parent = <&gpio>;
+        interrupts = <27 IRQ_TYPE_EDGE_FALLING>;
+        status = "okay";
+    };
+};
