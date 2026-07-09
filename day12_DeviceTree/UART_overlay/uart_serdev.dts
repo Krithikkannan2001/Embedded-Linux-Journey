@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+&uart2 {
+	status = "okay";
+	pinctrl-0 = <&uart2_pins>;
+
+	cp2102 {
+		compatible = "cp2102-serdev";
+	};
+};
