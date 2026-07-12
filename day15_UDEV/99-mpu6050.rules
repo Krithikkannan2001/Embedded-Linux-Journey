@@ -1,0 +1,1 @@
+KERNEL=="mpu6050", MODE="0664", GROUP="i2c"
