@@ -37,6 +37,9 @@ static ssize_t mpu_read(struct file *file, char __user *ubuf,
     /* Read 14 bytes: accel + temp + gyro */
     mpu_read_burst(ACCEL_XOUT_H, raw, 14);
 
+    dev_dbg(&mpu_client->dev, "Raw bytes read: %02x %02x %02x %02x\n", raw[0],raw[1],raw[2],raw[3]);
+
+
     /* Combine high and low bytes */
     ax       = (s16)((raw[0]  << 8) | raw[1]);
     ay       = (s16)((raw[2]  << 8) | raw[3]);
